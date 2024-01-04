@@ -1,0 +1,229 @@
+.faqContainer {
+  width: 100%;
+  padding-bottom: 200px;
+  color: var(--secondary-color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.accordion {
+  width: 900px;
+  margin: auto;
+}
+.accordion-item {
+  margin-bottom: 16px;
+  transition: 0.3s ease;
+}
+
+.accordion-link {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  background: #101010;
+  box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+  color: var(--secondary-color-white);
+  font-family: Poppins-500, sans-serif;
+  font-weight: 500;
+  transition: 650ms ease;
+}
+.accordion-link i {
+  color: #e7d5ff;
+  padding: 0.5rem;
+}
+
+.accordion-link ul {
+  display: flex;
+  align-items: flex-end;
+  list-style-type: none;
+  margin-left: 25px;
+}
+
+.accordion-link li {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 0 1px 5px;
+}
+
+.accordion-link div {
+  display: flex;
+}
+
+.accordion-link .ion-md-arrow-down {
+  display: none;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background: #101010;
+  transition: max-height 650ms;
+}
+.answer p {
+  color: var(--secondary-color-white);
+  padding: 24px 32px;
+  padding-top: 0;
+}
+.accordionArrow {
+  width: 42px;
+  height: 42px;
+  background: #212121;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.accordionArrow img {
+  width: 50%;
+  height: 50%;
+  transition: 0.3s ease;
+}
+.accordion-item-open .accordionArrow {
+  background: var(--main-color-pink);
+}
+.accordion-item-open .accordionArrow img {
+  transform: rotate(180deg);
+}
+.accordion-item-open {
+  border: 1px solid var(--main-color-pink);
+  border-radius: 18px;
+  box-shadow: 0px 6px 16px 0px rgba(74, 58, 255, 0.19);
+}
+.accordion-item-open .accordion-link {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordion-item-open .answer {
+  max-height: 20rem;
+  border-radius: 18px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.accordion-item-open .accordion-link .ion-md-arrow-forward {
+  display: none;
+}
+.accordion-item-open .accordion-link .ion-md-arrow-down {
+  display: block;
+}
+.accordion-link {
+  font-size: 20px;
+}
+.answer p {
+  font-size: 16px;
+}
+@media screen and (max-width: 1280px) {
+  .accordion-link {
+    font-size: 18px;
+  }
+  .answer p {
+    font-size: 14px;
+  }
+  .accordion {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 797px) {
+  .accordion {
+    width: 100%;
+    padding-left: var(--main-padding-lr-mobile);
+    padding-right: var(--main-padding-lr-mobile);
+  }
+  .accordion-link {
+    font-size: 20px;
+    padding: 16px;
+  }
+  .answer p {
+    font-size: 16px;
+    padding: 16px;
+    padding-top: 0;
+  }
+}
+.contactFAQ {
+  padding: 0;
+}
+.contactFAQ .accordion-link {
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+.contactFAQ .answer p {
+  padding: 12px 16px;
+  opacity: 0.6;
+}
+.contactFAQ .accordion {
+  width: 100%;
+}
+.contactFAQ .accordionArrow {
+  border-radius: 12px;
+}
+.contactFAQ .accordion-item-open .accordionArrow {
+  background: rgba(255, 255, 255, 0.06);
+}
+.contactFAQ .accordion-item-open,
+.detailsOverviewFAQ .accordion-item-open {
+  border: none;
+  box-shadow: none;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1600px) {
+  .contactFAQ .accordion-link {
+    font-size: 16px;
+  }
+  .contactFAQ .answer p {
+    font-size: 12px;
+  }
+  .contactFAQ .accordionArrow {
+    width: 24px;
+    height: 24px;
+  }
+  .contactFAQ .accordionArrow {
+    border-radius: 6px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contactFAQ .accordion-link {
+    font-size: 20px;
+  }
+  .contactFAQ .answer p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contactFAQ .accordion-link {
+    font-size: 18px;
+  }
+  .contactFAQ .answer p {
+    font-size: 16px;
+  }
+}
+
+.detailsOverviewFAQ .accordion {
+  width: 100%;
+}
+.detailsOverviewFAQ .accordion-item {
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.detailsOverviewFAQ .accordion-link,
+.detailsOverviewFAQ .answer p {
+  padding: 16px;
+  padding-left: 0;
+}
+.detailsOverviewFAQ .accordion-link,
+.detailsOverviewFAQ .answer {
+  background: #000;
+}
+.detailsOverviewFAQ .accordion-link {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins-500, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
